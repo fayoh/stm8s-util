@@ -50,28 +50,28 @@
 
 /* Flash */
 #define FLASH_CR1               _SFR_(0x5A)
-#define FLASH_CR1_HALT          3
-#define FLASH_CR1_AHALT         2
-#define FLASH_CR1_IE            1
-#define FLASH_CR1_FIX           0
+#define FLASH_CR1_HALT          1 << 3
+#define FLASH_CR1_AHALT         1 << 2
+#define FLASH_CR1_IE            1 << 1
+#define FLASH_CR1_FIX           1 << 0
 #define FLASH_CR2               _SFR_(0x5B)
-#define FLASH_CR2_OPT           7
-#define FLASH_CR2_WPRG          6
-#define FLASH_CR2_ERASE         5
-#define FLASH_CR2_FPRG          4
-#define FLASH_CR2_PRG           0
+#define FLASH_CR2_OPT           1 << 7
+#define FLASH_CR2_WPRG          1 << 6
+#define FLASH_CR2_ERASE         1 << 5
+#define FLASH_CR2_FPRG          1 << 4
+#define FLASH_CR2_PRG           1 << 0
 #define FLASH_NCR2              _SFR_(0x5C)
-#define FLASH_NCR2_NOPT         7
-#define FLASH_NCR2_NWPRG        6
-#define FLASH_NCR2_NERASE       5
-#define FLASH_NCR2_NFPRG        4
-#define FLASH_NCR2_NPRG         0
+#define FLASH_NCR2_NOPT         1 << 7
+#define FLASH_NCR2_NWPRG        1 << 6
+#define FLASH_NCR2_NERASE       1 << 5
+#define FLASH_NCR2_NFPRG        1 << 4
+#define FLASH_NCR2_NPRG         1 << 0
 #define FLASH_FPR               _SFR_(0x5D)
 #define FLASH_NFPR              _SFR_(0x5E)
 #define FLASH_IAPSR             _SFR_(0x5F)
-#define FLASH_IAPSR_DUL         3
-#define FLASH_IAPSR_EOP         2
-#define FLASH_IAPSR_PUL         1
+#define FLASH_IAPSR_DUL         1 << 3
+#define FLASH_IAPSR_EOP         1 << 2
+#define FLASH_IAPSR_PUL         1 << 1
 #define FLASH_PUKR              _SFR_(0x62)
 #define FLASH_PUKR_KEY1         0x56
 #define FLASH_PUKR_KEY2         0xAE
@@ -82,20 +82,20 @@
 /* Clock */
 #define CLK_ICKR                _SFR_(0xC0)
 #define CLK_ECKR                _SFR_(0xC1)
-#define CLK_ECKR_HSERDY         1
-#define CLK_ECKR_HSEEN          0
+#define CLK_ECKR_HSERDY         1 << 1
+#define CLK_ECKR_HSEEN          1 << 0
 #define CLK_CMSR                _SFR_(0xC3)
 #define CLK_SWR                 _SFR_(0xC4)
 #define CLK_SWCR                _SFR_(0xC5)
-#define CLK_SWCR_SWIF           3
-#define CLK_SWCR_SWIEN          2
-#define CLK_SWCR_SWEN           1
-#define CLK_SWCR_SWBSY          0
+#define CLK_SWCR_SWIF           1 << 3
+#define CLK_SWCR_SWIEN          1 << 2
+#define CLK_SWCR_SWEN           1 << 1
+#define CLK_SWCR_SWBSY          1 << 0
 #define CLK_CKDIVR              _SFR_(0xC6)
 #define CLK_PCKENR1             _SFR_(0xC7)
 #define CLK_CSSR                _SFR_(0xC8)
 #define CLK_CCOR                _SFR_(0xC9)
-#define CLK_CCOR_CCOEN          0
+#define CLK_CCOR_CCOEN          1 << 0
 #define CLK_PCKENR2             _SFR_(0xCA)
 #define CLK_HSITRIMR            _SFR_(0xCC)
 #define CLK_SWIMCCR             _SFR_(0xCD)
@@ -112,31 +112,31 @@
 
 /* SPI */
 #define SPI_CR1                 _SFR_(0x200)
-#define SPI_CR1_LSBFIRST        7
-#define SPI_CR1_SPE             6
-#define SPI_CR1_BR2             5
-#define SPI_CR1_BR1             4
-#define SPI_CR1_BR0             3
-#define SPI_CR1_MSTR            2
-#define SPI_CR1_CPOL            1
-#define SPI_CR1_CPHA            0
+#define SPI_CR1_LSBFIRST        1 << 7
+#define SPI_CR1_SPE             1 << 6
+#define SPI_CR1_BR2             1 << 5
+#define SPI_CR1_BR1             1 << 4
+#define SPI_CR1_BR0             1 << 3
+#define SPI_CR1_MSTR            1 << 2
+#define SPI_CR1_CPOL            1 << 1
+#define SPI_CR1_CPHA            1 << 0
 #define SPI_CR2                 _SFR_(0x201)
-#define SPI_CR2_BDM             7
-#define SPI_CR2_BDOE            6
-#define SPI_CR2_CRCEN           5
-#define SPI_CR2_CRCNEXT         4
-#define SPI_CR2_RXONLY          2
-#define SPI_CR2_SSM             1
-#define SPI_CR2_SSI             0
+#define SPI_CR2_BDM             1 << 7
+#define SPI_CR2_BDOE            1 << 6
+#define SPI_CR2_CRCEN           1 << 5
+#define SPI_CR2_CRCNEXT         1 << 4
+#define SPI_CR2_RXONLY          1 << 2
+#define SPI_CR2_SSM             1 << 1
+#define SPI_CR2_SSI             1 << 0
 #define SPI_ICR                 _SFR_(0x202)
 #define SPI_SR                  _SFR_(0x203)
-#define SPI_SR_BSY              7
-#define SPI_SR_OVR              6
-#define SPI_SR_MODF             5
-#define SPI_SR_CRCERR           4
-#define SPI_SR_WKUP             3
-#define SPI_SR_TXE              1
-#define SPI_SR_RXNE             0
+#define SPI_SR_BSY              1 << 7
+#define SPI_SR_OVR              1 << 6
+#define SPI_SR_MODF             1 << 5
+#define SPI_SR_CRCERR           1 << 4
+#define SPI_SR_WKUP             1 << 3
+#define SPI_SR_TXE              1 << 1
+#define SPI_SR_RXNE             1 << 0
 #define SPI_DR                  _SFR_(0x204)
 #define SPI_CRCPR               _SFR_(0x205)
 #define SPI_RXCRCR              _SFR_(0x206)
@@ -144,30 +144,30 @@
 
 /* I2C */
 #define I2C_CR1                 _SFR_(0x210)
-#define I2C_CR1_PE              0
+#define I2C_CR1_PE              1 << 0
 #define I2C_CR2                 _SFR_(0x211)
-#define I2C_CR2_ACK             2
-#define I2C_CR2_STOP            1
-#define I2C_CR2_START           0
+#define I2C_CR2_ACK             1 << 2
+#define I2C_CR2_STOP            1 << 1
+#define I2C_CR2_START           1 << 0
 #define I2C_FREQR               _SFR_(0x212)
-#define I2C_FREQR_FREQ2         2
-#define I2C_FREQR_FREQ1         1
-#define I2C_FREQR_FREQ0         0
+#define I2C_FREQR_FREQ2         1 << 2
+#define I2C_FREQR_FREQ1         1 << 1
+#define I2C_FREQR_FREQ0         1 << 0
 #define I2C_OARL                _SFR_(0x213)
 #define I2C_OARH                _SFR_(0x214)
-#define I2C_OARH_ADDMODE        7
-#define I2C_OARH_ADDCONF        6
+#define I2C_OARH_ADDMODE        1 << 7
+#define I2C_OARH_ADDCONF        1 << 6
 #define I2C_DR                  _SFR_(0x216)
 #define I2C_SR1                 _SFR_(0x217)
-#define I2C_SR1_TXE             7
-#define I2C_SR1_RXNE            6
-#define I2C_SR1_BTF             2
-#define I2C_SR1_ADDR            1
-#define I2C_SR1_SB              0
+#define I2C_SR1_TXE             1 << 7
+#define I2C_SR1_RXNE            1 << 6
+#define I2C_SR1_BTF             1 << 2
+#define I2C_SR1_ADDR            1 << 1
+#define I2C_SR1_SB              1 << 0
 #define I2C_SR2                 _SFR_(0x218)
 #define I2C_SR3                 _SFR_(0x219)
-#define I2C_SR3_BUSY            1
-#define I2C_SR3_MSL             0
+#define I2C_SR3_BUSY            1 << 1
+#define I2C_SR3_MSL             1 << 0
 #define I2C_ITR                 _SFR_(0x21A)
 #define I2C_CCRL                _SFR_(0x21B)
 #define I2C_CCRH                _SFR_(0x21C)
@@ -176,16 +176,18 @@
 
 /* UART1 */
 #define UART1_SR                _SFR_(0x230)
-#define UART1_SR_TXE            7
-#define UART1_SR_TC             6
-#define UART1_SR_RXNE           5
+#define UART1_SR_TXE            1 << 7
+#define UART1_SR_TC             1 << 6
+#define UART1_SR_RXNE           1 << 5
 #define UART1_DR                _SFR_(0x231)
 #define UART1_BRR1              _SFR_(0x232)
 #define UART1_BRR2              _SFR_(0x233)
 #define UART1_CR1               _SFR_(0x234)
 #define UART1_CR2               _SFR_(0x235)
-#define UART1_CR2_TEN           3
-#define UART1_CR2_REN           2
+#define UART1_CR2_TIEN          1 << 7
+#define UART1_CR2_RIEN          1 << 5
+#define UART1_CR2_TEN           1 << 3
+#define UART1_CR2_REN           1 << 2
 #define UART1_CR3               _SFR_(0x236)
 #define UART1_CR4               _SFR_(0x237)
 #define UART1_CR5               _SFR_(0x238)
@@ -194,16 +196,16 @@
 
 /* UART2 */
 #define UART2_SR                _SFR_(0x240)
-#define UART2_SR_TXE            7
-#define UART2_SR_TC             6
-#define UART2_SR_RXNE           5
+#define UART2_SR_TXE            1 << 7
+#define UART2_SR_TC             1 << 6
+#define UART2_SR_RXNE           1 << 5
 #define UART2_DR                _SFR_(0x241)
 #define UART2_BRR1              _SFR_(0x242)
 #define UART2_BRR2              _SFR_(0x243)
 #define UART2_CR1               _SFR_(0x244)
 #define UART2_CR2               _SFR_(0x245)
-#define UART2_CR2_TEN           3
-#define UART2_CR2_REN           2
+#define UART2_CR2_TEN           1 << 3
+#define UART2_CR2_REN           1 << 2
 #define UART2_CR3               _SFR_(0x246)
 #define UART2_CR4               _SFR_(0x247)
 #define UART2_CR5               _SFR_(0x248)
@@ -211,15 +213,33 @@
 #define UART2_GTR               _SFR_(0x24A)
 #define UART2_PSCR              _SFR_(0x24B)
 
+/* TIM2 */
+#define TIM2_CCMR1              _SFR_(0x307)
+#define TIM2_CCMR2              _SFR_(0x308)
+#define TIM2_CCMR3              _SFR_(0x309)
+#define TIM2_CCER1              _SFR_(0x30A)
+#define TIM2_CCER1_CC2E         1 << 4
+#define TIM2_CCER1_CC1E         1 << 0
+#define TIM2_CCER2              _SFR_(0x30B)
+#define TIM2_CCER2_CC3E         1 << 0
+#define TIM2_ARRH               _SFR_(0x30F)
+#define TIM2_ARRL               _SFR_(0x310)
+#define TIM2_CCR1H              _SFR_(0x311)
+#define TIM2_CCR1L              _SFR_(0x312)
+#define TIM2_CCR2H              _SFR_(0x313)
+#define TIM2_CCR2L              _SFR_(0x314)
+#define TIM2_CCR3H              _SFR_(0x315)
+#define TIM2_CCR3L              _SFR_(0x316)
+
 /* TIM4 */
 #define TIM4_CR1                _SFR_(0x340)
-#define TIM4_CR1_ARPE           7
-#define TIM4_CR1_URS            2
-#define TIM4_CR1_CEN            0
-#define TIM4_IER                _SFR_(0x343)
-#define TIM4_IER_UIE            0
+#define TIM4_CR1_ARPE           1 << 1 << 7
+#define TIM4_CR1_URS            1 << 1 << 2
+#define TIM4_CR1_CEN            1 << 1 << 0
+#define TIM4_IER                1 << _SFR_(0x343)
+#define TIM4_IER_UIE            1 << 0
 #define TIM4_SR                 _SFR_(0x344)
-#define TIM4_SR_UIF             0
+#define TIM4_SR_UIF             1 << 0
 #define TIM4_EGR                _SFR_(0x345)
 #define TIM4_CNTR               _SFR_(0x346)
 #define TIM4_PSCR               _SFR_(0x347)
@@ -228,28 +248,28 @@
 /* ADC1 */
 #define ADC1_DB0R               _SFR_(0x3E0)
 #define ADC1_CSR                _SFR_(0x400)
-#define ADC1_CSR_EOC            7
-#define ADC1_CSR_AWD            6
-#define ADC1_CSR_EOCIE          5
-#define ADC1_CSR_CH3            3
-#define ADC1_CSR_CH2            2
-#define ADC1_CSR_CH1            1
-#define ADC1_CSR_CH0            0
+#define ADC1_CSR_EOC            1 << 7
+#define ADC1_CSR_AWD            1 << 6
+#define ADC1_CSR_EOCIE          1 << 5
+#define ADC1_CSR_CH3            1 << 3
+#define ADC1_CSR_CH2            1 << 2
+#define ADC1_CSR_CH1            1 << 1
+#define ADC1_CSR_CH0            1 << 0
 #define ADC1_CR1                _SFR_(0x401)
-#define ADC1_CR1_SPSEL2         6
-#define ADC1_CR1_SPSEL1         5
-#define ADC1_CR1_SPSEL0         4
-#define ADC1_CR1_CONT           1
-#define ADC1_CR1_ADON           0
+#define ADC1_CR1_SPSEL2         1 << 6
+#define ADC1_CR1_SPSEL1         1 << 5
+#define ADC1_CR1_SPSEL0         1 << 4
+#define ADC1_CR1_CONT           1 << 1
+#define ADC1_CR1_ADON           1 << 0
 #define ADC1_CR2                _SFR_(0x402)
-#define ADC1_CR2_EXTTRIG        6
-#define ADC1_CR2_EXTSEL1        5
-#define ADC1_CR2_EXTSEL0        4
-#define ADC1_CR2_ALIGN          3
-#define ADC1_CR2_SCAN           1
+#define ADC1_CR2_EXTTRIG        1 << 6
+#define ADC1_CR2_EXTSEL1        1 << 5
+#define ADC1_CR2_EXTSEL0        1 << 4
+#define ADC1_CR2_ALIGN          1 << 3
+#define ADC1_CR2_SCAN           1 << 1
 #define ADC1_CR3                _SFR_(0x403)
-#define ADC1_CR3_DBUF           7
-#define ADC1_CR3_OVR            6
+#define ADC1_CR3_DBUF           1 << 7
+#define ADC1_CR3_OVR            1 << 6
 #define ADC1_DRH                _SFR_(0x404)
 #define ADC1_DRL                _SFR_(0x405)
 #define ADC1_TDRH               _SFR_(0x406)
@@ -286,5 +306,11 @@
 
 #define enable_interrupts()     __asm__("rim");
 #define disable_interrupts()    __asm__("sim");
+
+#define enter_wait_state() __asm__("wfi")
+
+// These are optimized by sdcc to use the bset/bres assembly instructions.
+#define CLRBIT(REG, VALUE) REG &= ~VALUE
+#define SETBIT(REG, VALUE) REG |= ~VALUE
 
 #endif /* STM8S_H */
