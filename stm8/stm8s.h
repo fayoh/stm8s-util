@@ -86,7 +86,10 @@
 #define CLK_ECKR_HSEEN          1 << 0
 #define CLK_CMSR                _SFR_(0xC3)
 #define CLK_SWR                 _SFR_(0xC4)
-#define CLK_SWCR                _SFR_(0xC5)
+#define CLK_SWR_HSI_EN         0xE1
+#define CLK_SWR_LSI_EN         0xD2
+#define CLK_SWR_HSE_EN         0xB4
+#define CLK_SWCR               _SFR_(0xC5)
 #define CLK_SWCR_SWIF           1 << 3
 #define CLK_SWCR_SWIEN          1 << 2
 #define CLK_SWCR_SWEN           1 << 1
@@ -214,14 +217,29 @@
 #define UART2_PSCR              _SFR_(0x24B)
 
 /* TIM2 */
+#define TIM2_CR1                _SFR_(0x300)
+#define TIM2_CR1_ARPE           1 << 7
+#define TIM2_CR1_CEN            1 << 0
+#define TIM2_IER                _SFR_(0x303)
+#define TIM2_SR1                _SFR_(0x304)
+#define TIM2_SR2                _SFR_(0x305)
+#define TIM2_EGR                _SFR_(0x306)
 #define TIM2_CCMR1              _SFR_(0x307)
+#define TIM2_CCMR1_OC1M2        1 << 6
+#define TIM2_CCMR1_OC1M1        1 << 5
+#define TIM2_CCMR1_OC1M0        1 << 4
+#define TIM2_CCMR1_OC1PE        1 << 3
 #define TIM2_CCMR2              _SFR_(0x308)
 #define TIM2_CCMR3              _SFR_(0x309)
 #define TIM2_CCER1              _SFR_(0x30A)
 #define TIM2_CCER1_CC2E         1 << 4
+#define TIM2_CCER1_CC1P         1 << 1
 #define TIM2_CCER1_CC1E         1 << 0
 #define TIM2_CCER2              _SFR_(0x30B)
 #define TIM2_CCER2_CC3E         1 << 0
+#define TIM2_CNTRH              _SFR_(0x30C)
+#define TIM2_CNTRL              _SFR_(0x30D)
+#define TIM2_PSCR               _SFR_(0x30E)
 #define TIM2_ARRH               _SFR_(0x30F)
 #define TIM2_ARRL               _SFR_(0x310)
 #define TIM2_CCR1H              _SFR_(0x311)
