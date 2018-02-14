@@ -329,6 +329,6 @@
 
 // These are optimized by sdcc to use the bset/bres assembly instructions.
 #define CLRBIT(REG, VALUE) REG &= ~VALUE
-#define SETBIT(REG, VALUE) REG |= ~VALUE
+#define SETBIT(REG, VALUE) REG |= VALUE
 
 #endif /* STM8S_H */
