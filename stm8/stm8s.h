@@ -271,6 +271,10 @@
 #define TIM4_PSCR               _SFR_(0x347)
 #define TIM4_ARR                _SFR_(0x348)
 
+/** TIMX */
+#define TIMX_CCMR_PWM1          0x68
+#define TIMX_CCMR_PWM2          0x78
+
 /* ADC1 */
 #define ADC1_DB0R               _SFR_(0x3E0)
 #define ADC1_CSR                _SFR_(0x400)
