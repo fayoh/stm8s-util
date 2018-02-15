@@ -96,10 +96,18 @@
 #define CLK_SWCR_SWBSY          1 << 0
 #define CLK_CKDIVR              _SFR_(0xC6)
 #define CLK_PCKENR1             _SFR_(0xC7)
+#define CLK_PCKENR1_TIM1        1 << 7
+#define CLK_PCKENR1_TIM2        1 << 5
+#define CLK_PCKENR1_TIM4        1 << 4
+#define CLK_PCKENR1_UART1       1 << 3
+#define CLK_PCKENR1_SPI         1 << 1
+#define CLK_PCKENR1_I2C         1 << 0
 #define CLK_CSSR                _SFR_(0xC8)
 #define CLK_CCOR                _SFR_(0xC9)
 #define CLK_CCOR_CCOEN          1 << 0
 #define CLK_PCKENR2             _SFR_(0xCA)
+#define CLK_PCKENR2_ADC         1 << 7
+#define CLK_PCKENR2_AWU         1 << 6
 #define CLK_HSITRIMR            _SFR_(0xCC)
 #define CLK_SWIMCCR             _SFR_(0xCD)
 
