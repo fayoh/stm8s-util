@@ -229,7 +229,13 @@
 #define TIM2_CR1_ARPE           1 << 7
 #define TIM2_CR1_CEN            1 << 0
 #define TIM2_IER                _SFR_(0x303)
+#define TIM2_IER_CC1IE          1 << 3
+#define TIM2_IER_CC2IE          1 << 2
+#define TIM2_IER_CC3IE          1 << 1
 #define TIM2_SR1                _SFR_(0x304)
+#define TIM2_SR1_CC1IF          1 << 3
+#define TIM2_SR1_CC2IF          1 << 2
+#define TIM2_SR1_CC3IF          1 << 1
 #define TIM2_SR2                _SFR_(0x305)
 #define TIM2_EGR                _SFR_(0x306)
 #define TIM2_CCMR1              _SFR_(0x307)
