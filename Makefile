@@ -5,4 +5,4 @@ OBJECTS=stm8/stm8s.h
 .PHONY: install
 
 install:
-	$(INSTALL) -m 0755 $(OBJECTS) $(PREFIX)/include
+	$(INSTALL) -m 0644 $(OBJECTS) $(PREFIX)/include
